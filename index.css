@@ -1,73 +1,124 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Comic Sans MS", "Poppins", Arial, sans-serif;
+}
+
+/* Cores principais do tema infantil */
+:root {
+    --cor-primaria: #FF8C42;   /* laranja alegre */
+    --cor-secundaria: #4EC5F1; /* azul claro */
+    --cor-terciaria: #FCE762;  /* amarelo suave */
+    --cor-texto: #333;
 }
 
 /* Estilo do header */
 header {
-    background-color: #333;
+    background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
     color: white;
-    padding: 20px;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 5px solid var(--cor-terciaria);
 }
 
 header h1 {
-    margin-bottom: 10px;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
 }
 
 nav ul {
     list-style: none;
+    margin-top: 15px;
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav a {
-    color: white;
+    background: var(--cor-terciaria);
+    padding: 10px 20px;
+    border-radius: 15px;
     text-decoration: none;
+    color: var(--cor-texto);
     font-weight: bold;
+    border: 2px solid white;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background: white;
+    border-color: var(--cor-terciaria);
 }
 
-/* Conteúdo principal */
+/* Sessão principal estilo infantil */
 .hero {
     text-align: center;
     padding: 80px 20px;
-    background: #f1f1f1;
+    background: #FFFBE0;
+    position: relative;
+}
+
+/* Nuvens decorativas */
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 60px;
+    background: white;
+    border-radius: 60px;
+    top: 20px;
+    opacity: 0.6;
+}
+
+.hero::before {
+    left: 15%;
+    transform: translateX(-50%);
+}
+
+.hero::after {
+    right: 15%;
+    transform: translateX(50%);
 }
 
 .hero h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.2rem;
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: var(--cor-texto);
+    margin-bottom: 30px;
 }
 
 .hero button {
-    padding: 10px 25px;
-    border: none;
-    background-color: #333;
-    color: white;
-    font-size: 1rem;
+    padding: 12px 28px;
+    border: 3px solid var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
+    color: var(--cor-texto);
+    font-size: 1.1rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 25px;
+    box-shadow: 3px 3px 0px var(--cor-secundaria);
+    transition: 0.2s;
 }
 
 .hero button:hover {
-    background-color: #555;
+    transform: scale(1.05);
+    background-color: var(--cor-secundaria);
+    color: white;
 }
 
-/* Rodapé */
+/* Rodapé com tema infantil */
 footer {
     text-align: center;
-    padding: 15px;
-    background-color: #333;
+    padding: 20px;
+    background: var(--cor-secundaria);
     color: white;
+    font-weight: bold;
+    border-top: 5px solid var(--cor-terciaria);
 }
