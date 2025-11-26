@@ -13,7 +13,16 @@
     --cor-texto: #333;
 }
 
-/* Estilo do header */
+:root {
+    --terra: #C18F5A;          /* marrom claro */
+    --terra-escura: #7A552E;   /* marrom escuro */
+    --folha: #6B8E23;          /* verde folha */
+    --areia: #F3E4C3;          /* amarelo areia */
+    --ceu: #D9F2FF;            /* azul céu */
+    --texto: #3A2F1B;
+}
+
+/* Header estilo safari */
 header {
     background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
     color: white;
